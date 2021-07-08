@@ -7,28 +7,25 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;700&family=Oswald&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css">
-        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-	    <script type="text/javascript" src="js/jquery.main.js"></script>
+        <!-- <link rel="stylesheet" href="css/main.css"> -->
+        <link rel="stylesheet" href="css/mobile.css">
         <title>HW10</title>
     </head>
     <body>
-        <div class="wrap fade">
-            <header class="header">
-                <a class="logo"><img src="image/logo.png" alt=""></a>
-                <nav class="menu">
-                    <a href="#" class="opener hidden"><span>Menu</span></a>
-                    <div class="drop">
-                        <ul class="header__nav">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Shop online</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-        </div>
+        <header class="header">
+			<a href="#" class="logo"><img src="image/logo.png" alt="logo"></a>
+			<input id="check-menu" type="checkbox">
+			<label for="check-menu" class="menu-label">menu</label>
+            <div class="burger-line first"></div>
+            <div class="burger-line second"></div>
+            <div class="burger-line thirth"></div>
+			<nav class="menu">
+				<a href="#">HOME</a>
+				<a href="#">ABOUT US</a>
+				<a href="#">SHOP ONLINE</a>
+				<a href="#">CONTACT US</a>
+			</nav>
+		</header>
         <main>
             <section class="first-section">
                 <h1>Let's get started</h1>
@@ -40,7 +37,7 @@
                         <div class="section__description">
                             <h2 class="section__title">Choose Your Meals</h2>
                             <p class="section__post">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                            <button class="section__button">View meal plans</button>
+                            <button class="section__button btn">View meal plans</button>
                         </div>
                     </div>
                 </div>
@@ -64,7 +61,7 @@
                         <div class="section__description">
                             <h2 class="section__title">Heat, Eat, and Enjoy</h2>
                             <p class="section__post">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                            <button class="section__button">Get Started</button>
+                            <button class="section__button btn">Get Started</button>
                         </div>
                     </div>
                 </div>
@@ -82,7 +79,7 @@
                             </div>
                         </div>
                         <h3 class="card__title">Maple Quinoa Porrige</h3>
-                        <button class="card__btn">choose</button>
+                        <button class="section__button">choose</button>
                     </div>
                     <div class="card">
                         <div class="card__photo card2">
@@ -91,7 +88,7 @@
                             </div>
                         </div>
                         <h3 class="card__title">Maple Quinoa Porrige</h3>
-                        <button class="card__btn">choose</button>
+                        <button class="section__button">choose</button>
                     </div>
                     <div class="card">
                         <div class="card__photo card3">
@@ -100,7 +97,7 @@
                             </div>
                         </div>
                         <h3 class="card__title">Maple Quinoa Porrige</h3>
-                        <button class="card__btn">choose</button>
+                        <button class="section__button">choose</button>
                     </div>
                     <div class="card">
                         <div class="card__photo card4">
@@ -109,7 +106,7 @@
                             </div>
                         </div>
                         <h3 class="card__title">Maple Quinoa Porrige</h3>
-                        <button class="card__btn">choose</button>                            
+                        <button class="section__button">choose</button>                            
                     </div>
                 </div>
             </section>
