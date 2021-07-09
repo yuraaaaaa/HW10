@@ -195,6 +195,12 @@
         font-size: 15px;
         line-height: 20px;
         border-radius: 33px;
+        transition: background-color .3s ease-in-out;
+    }
+
+    .section__end:hover {
+        background-color: #97b621;
+        color: #fff;
     }
     
     .section__btn {
@@ -318,6 +324,15 @@
         left: 40%;
     }
 
+    .section__end {
+        transition: background-color .3s ease-in-out;
+    }
+
+    .section__end:hover {
+        background-color: #97b621;
+        color: #fff;
+    }
+
     .section--reverse {
         display: flex;
         flex-direction: row-reverse;
@@ -391,62 +406,87 @@
 }
 
 @media (min-width:993px) {
+    body {
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
     button, h1, h2, h3 {
         font-family: 'Oswald', 'Arial', 'Helvetica', sans-serif;
         color: #7ea2b3;
     }
      
     .header {
+        width: 100%;
+        height: 70px;
         display: flex;
         justify-content: space-between;
-        position: relative;
     }
-    
+
     .header::after {
-        content: "";
-        position: absolute;
-        top: 120px;
+        content: '';
         width: 100%;
-        height: 2px;
-        background-color: #58b621;
+        background-color: #97b621;
+        position: absolute;
+        top: 90px;
     }
-    
+
     .logo {
-        margin: 10px;
-        width: 100px;
-        height: 100px;
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        padding: 10px;
     }
-    
+
     .logo img {
         width: 100%;
         height: 100%;
     }
-    
+
     #check-menu, .menu-label {
+        visibility: hidden;
+        position: absolute;
+        top: -150px;
+    }
+
+    .burger-line {
         display: none;
     }
-    
+
     .menu {
         display: flex;
-        transform: translateX(300px);
         justify-content: space-around;
-        list-style: none;
-        margin: auto;
-    }
-    
-    .menu a{
-        display: inline-block;
-        vertical-align: middle;
-        padding: 45px 10px;
         font-size: 21px;
-        text-decoration: none;
-        color: #6d6d6d;
-        text-transform: uppercase;
-        transition: color .3s ease-in-out;
-    }
-    
+        overflow: inherit;
+        transform: none;
+        position: relative;
+        width: auto;
+        left: 70%;
+        bottom: inherit;
+        max-height: 21px;
+        z-index: 0;
+	}
+			
+	.menu a {
+		display: inline-block;
+        width: auto;
+        padding: 10px;
+        line-height: 70px;
+        background-color: initial;
+        border: none;
+        transition: color 0.3s ease-in-out;
+	}
+
     .menu a:hover {
-        color: #58b621;
+        color: #97b621;
+    }
+
+    main {
+        margin-top: 20px;
+    }
+
+    .first-section {
+        margin: 10px -50px 0 50px;
     }
     
     section {
@@ -498,8 +538,8 @@
         box-shadow: 1px 2px 31px -2px rgba(34, 60, 80, 0.2);
     }
     
-    .reverse {
-        left: 100px;
+    .section__text--reverse {
+        left: 80px;
     }
     
     .section__description {
@@ -541,8 +581,19 @@
     }
     
     .section__btn {
-        margin: 0 auto;
-        position: relative;
+        display: block;
+        left: inherit;
+    }
+
+    .section__end {
+        font-size: 16px;
+        text-align: center;
+        transition: background-color .3s ease-in-out;
+    }
+
+    .section__end:hover {
+        background-color: #97b621;
+        color: #fff;
     }
     
     .section__btn::after {
@@ -564,21 +615,25 @@
     .card__holder {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-around;
     }
     
     .card {
         margin: 20px;
+        width: auto;
+
     }
     
     .card__title {
         text-align: center;
         font-size: 24px;
         line-height: 30px;
+        margin-left: 0;
     }
     
-    .card__btn {
-        margin-left: 39px;
+    .section__button--card {
+        margin: 5px 0 0 39px;
         width: 188px;
         height: 42px;
         border: none;
